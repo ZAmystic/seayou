@@ -135,7 +135,7 @@ npm run preview
 
 # SeaYou System Architecture
 
-Frontend (React + Vite + TypeScript)
+```Frontend (React + Vite + TypeScript)
 ------------------------------------
 [Dashboard.tsx] --> [DroneFeed.tsx] --> (WebRTC/RTSP stream)
                 --> [WebcamFeed.tsx] --> (WebRTC stream)
@@ -153,7 +153,7 @@ Data Flow
 ---------
 Drone/Webcam --> WebRTC --> React Dashboard
 Telemetry --> WebSocket --> React Dashboard
-Video Frames --> API --> Python ML --> Prediction --> React Alerts
+Video Frames --> API --> Python ML --> Prediction --> React Alerts```
 
 ---
 
