@@ -153,7 +153,8 @@ Data Flow
 ---------
 Drone/Webcam --> WebRTC --> React Dashboard
 Telemetry --> WebSocket --> React Dashboard
-Video Frames --> API --> Python ML --> Prediction --> React Alerts```
+Video Frames --> API --> Python ML --> Prediction --> React Alerts
+```
 
 ---
 
