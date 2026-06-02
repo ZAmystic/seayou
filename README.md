@@ -34,7 +34,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
   ![Management](https://img.shields.io/badge/Role-Management-green) ![Planning](https://img.shields.io/badge/Focus-Planning-yellow)  
   Handles planning, scheduling, and resource allocation, ensuring smooth execution.
 
----
+<br>
 
 ### AI & Machine Learning
 - **Rivan Martiz [601530]** – AI & ML Engineering Team Lead  
@@ -45,7 +45,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
   ![Engineer](https://img.shields.io/badge/Role-Engineer-lightblue) ![AI](https://img.shields.io/badge/Focus-AI-red)  
   Implements and optimizes machine learning models for real-time inference.
 
----
+<br>
 
 ### Frontend Development
 - **Jonathan Rossouw [601761]** – Frontend Development Team Lead  
@@ -56,7 +56,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
   ![Frontend](https://img.shields.io/badge/Role-Frontend-orange) ![React](https://img.shields.io/badge/Tech-React-blue)  
   Builds React components, integrates live video feeds, and ensures usability.
 
----
+<br>
 
 ### Backend Development
 - **Marcus Swanepoel [602162]** – Backend Developer Team Lead  
@@ -67,7 +67,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
   ![Backend](https://img.shields.io/badge/Role-Backend-blue) ![Server](https://img.shields.io/badge/Focus-Server%20Logic-green)  
   Implements server-side logic, communication protocols, and data handling.
 
----
+<br>
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** – Data Engineer Team Lead  
