@@ -63,10 +63,10 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** :
-<br> ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue)  ![Quality Assurance Lead](https://img.shields.io/badge/Secondary%20Role-Quality%20Assurance%20Lead-F56827)
+<br> ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue) ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) ![Quality Assurance Lead](https://img.shields.io/badge/Secondary%20Role-Quality%20Assurance%20Lead-F56827)
 
 - **Rudi Jan Du Plessis [601342]** :
-<br> ![Data Engineer](https://img.shields.io/badge/Main%20Role-Data%20Engineer-darkblue) 
+<br> ![Data Engineer](https://img.shields.io/badge/Main%20Role-Data%20Engineer-darkblue) ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) 
 
 
 ## 🌟 Team Vision
