@@ -37,41 +37,41 @@ South Africa has one of the world’s highest drowning rates, especially during 
 <br>
 
 ### AI & Machine Learning
-- **Rivan Martiz [601530]** – AI & ML Engineering Team Lead  
-  ![Machine Learning Lead](https://img.shields.io/badge/Role-AI%20Lead-lightblue)
+- **Rivan Martiz [601530]** – Machine Learning Engineering Team Lead  
+  ![Machine Learning Lead](https://img.shields.io/badge/Role-Machine%20Learning%20Lead-lightblue)
   Guides the development of drowning detection models and predictive drift algorithms.  
 
-- **Nicholas Vronka [601596]** – AI & ML Engineer  
-  ![Machine Learning Engineer](https://img.shields.io/badge/Role-Engineer-lightblue)  
+- **Nicholas Vronka [601596]** – Machine Learning Engineer  
+  ![Machine Learning Engineer](https://img.shields.io/badge/Role-Machine%20Learning%20Engineer-lightblue)  
   Implements and optimizes machine learning models for real-time inference.
 
 <br>
 
 ### Frontend Development
 - **Jonathan Rossouw [601761]** – Frontend Development Team Lead  
-  ![Front-End Development Lead](https://img.shields.io/badge/Role-Frontend%20Lead-pink)
+  ![Front-End Development Lead](https://img.shields.io/badge/Role-Frontend%20Development%20Lead-pink)
   Designs and manages the lifeguard dashboard and user interface.  
 
 - **Ryno Lourens [601845]** – Frontend Developer  
-  ![Front-End Developer](https://img.shields.io/badge/Role-Frontend-pink)
+  ![Front-End Developer](https://img.shields.io/badge/Role-Frontend%20Developer-pink)
   Builds React components, integrates live video feeds, and ensures usability.
 
 <br>
 
 ### Backend Development
 - **Marcus Swanepoel [602162]** – Backend Developer Team Lead  
-  ![Backend Development Lead](https://img.shields.io/badge/Role-Backend%20Lead-blue)
+  ![Backend Development Lead](https://img.shields.io/badge/Role-Backend%20Developer%20Lead-blue)
   Architect of the backend services, APIs, and system integration.  
 
 - **Declin Vorkel [601756]** – Backend Developer  
-  ![Backend Developer](https://img.shields.io/badge/Role-Backend-blue)
+  ![Backend Developer](https://img.shields.io/badge/Role-Backend%20Developer-blue)
   Implements server-side logic, communication protocols, and data handling.
 
 <br>
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** – Data Engineer Team Lead  
-  ![Data Engineer Lead](https://img.shields.io/badge/Role-Data%20Lead-darkblue)  
+  ![Data Engineer Lead](https://img.shields.io/badge/Role-Data%20Engineer%20Lead-darkblue)  
   Manages data pipelines, telemetry storage, and analytics.  
 
 - **Rudi Jan Du Plessis [601342]** – Data Engineer  
