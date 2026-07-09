@@ -27,7 +27,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Leadership
 - **Theart Jooste [601288]** :
- <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Leadership-blue)
+ <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Team%20Lead-blue)
 
 - **Jason Crous [601662]** :
 <br> ![Project Manager](https://img.shields.io/badge/Main%20Role-Project%20Manager-green)  
