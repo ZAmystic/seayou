@@ -31,7 +31,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
   Oversees the entire project, ensures milestones are met, and coordinates across all teams.  
 
 - **Jason Crous [601662]** – Project Manager  
-  ![Project Manager](https://img.shields.io/badge/Role-Project-Management-green)  
+  ![Project Manager](https://img.shields.io/badge/Role-Project-Manager-green)  
   Handles planning, scheduling, and resource allocation, ensuring smooth execution.
 
 <br>
