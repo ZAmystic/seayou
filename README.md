@@ -39,7 +39,10 @@ South Africa has one of the world’s highest drowning rates, especially during 
 <br> ![Machine Learning Lead](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Lead-lightblue) ![Drone Development Lead](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20Lead-8A2BE2) ![Asst Team Lead](https://img.shields.io/badge/Tertiary%20Role-Asst%20Team%20Lead-ff004c)
 
 - **Nicholas Vronka [601596]** :
-<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) 
+<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2)
+
+- **Liam De Villiers [601596]** :
+<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2)
 
 <br>
 
