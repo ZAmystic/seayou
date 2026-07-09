@@ -27,7 +27,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Leadership
 - **Theart Jooste [601288]** :
- <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Team%20Lead-blue) ![Solutions Architect](https://img.shields.io/badge/Secondary%20Role-Solutions%20Architect-F56827)
+ <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Team%20Lead-blue) ![Solutions Architect](https://img.shields.io/badge/Secondary%20Role-Solutions%20Architect-F5EE27)
 
 - **Jason Crous [601662]** :
 <br> ![Project Manager](https://img.shields.io/badge/Main%20Role-Project%20Manager-green)  ![Front-End Developer](https://img.shields.io/badge/Secondary%20Role-Frontend%20Developer-pink)
@@ -39,7 +39,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
 <br> ![Machine Learning Lead](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Lead-lightblue) ![Drone Development Lead](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20Lead-8A2BE2) 
 
 - **Nicholas Vronka [601596]** :
-<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  
+<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) 
 
 <br>
 
@@ -54,16 +54,16 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Backend Development
 - **Marcus Swanepoel [602162]** :
-<br> ![Backend Development Lead](https://img.shields.io/badge/Main%20Role-Backend%20Developer%20Lead-blue)
+<br> ![Backend Development Lead](https://img.shields.io/badge/Main%20Role-Backend%20Developer%20Lead-blue) ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) 
 
 - **Declin Vorkel [601756]** :
-<br> ![Backend Developer](https://img.shields.io/badge/Main%20Role-Backend%20Developer-blue)
+<br> ![Backend Developer](https://img.shields.io/badge/Main%20Role-Backend%20Developer-blue) ![Drone Development](https://img.shields.io/badge/Secondary%20Role-Drone%20Development%20-8A2BE2) 
 
 <br>
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** :
-<br> ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue)  
+<br> ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue)  ![Quality Assurance Lead](https://img.shields.io/badge/Secondary%20Role-Quality%20Assurance%20Lead-F56827)
 
 - **Rudi Jan Du Plessis [601342]** :
 <br> ![Data Engineer](https://img.shields.io/badge/Main%20Role-Data%20Engineer-darkblue) 
