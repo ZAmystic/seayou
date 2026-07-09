@@ -45,7 +45,7 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Frontend Development
 - **Jonathan Rossouw [601761]** :
-<br> ![Front-End Development Lead](https://img.shields.io/badge/Main%20Role-Frontend%20Development%20Lead-pink)
+<br> ![Front-End Development Lead](https://img.shields.io/badge/Main%20Role-Frontend%20Development%20Lead-pink) ![Quality Assurance Engineer](https://img.shields.io/badge/Secondary%20Role-Quality%20Assurance%20Engineer-F56827)
 
 - **Ryno Lourens [601845]** :
 <br> ![Front-End Developer](https://img.shields.io/badge/Main%20Role-Frontend%20Developer-pink) ![Quality Assurance Engineer](https://img.shields.io/badge/Secondary%20Role-Quality%20Assurance%20Engineer-F56827)
