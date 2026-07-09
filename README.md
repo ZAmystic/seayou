@@ -27,46 +27,46 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Leadership
 - **Theart Jooste [601288]** :
-- ![Team Lead](https://img.shields.io/badge/Main%20Role-Leadership-blue)
+ <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Leadership-blue)
 
 - **Jason Crous [601662]** :
-- ![Project Manager](https://img.shields.io/badge/Main%20Role-Project%20Manager-green)  
+<br> ![Project Manager](https://img.shields.io/badge/Main%20Role-Project%20Manager-green)  
 
 <br>
 
 ### AI & Machine Learning
 - **Rivan Martiz [601530]** :
-- ![Machine Learning Lead](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Lead-lightblue) 
+<br> ![Machine Learning Lead](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Lead-lightblue) 
 
 - **Nicholas Vronka [601596]** :
-- ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  
+<br> ![Machine Learning Engineer](https://img.shields.io/badge/Main%20Role-Machine%20Learning%20Engineer-lightblue)  
 
 <br>
 
 ### Frontend Development
 - **Jonathan Rossouw [601761]** :
-- ![Front-End Development Lead](https://img.shields.io/badge/Main%20Role-Frontend%20Development%20Lead-pink)
+<br> ![Front-End Development Lead](https://img.shields.io/badge/Main%20Role-Frontend%20Development%20Lead-pink)
 
 - **Ryno Lourens [601845]** :
-- ![Front-End Developer](https://img.shields.io/badge/Main%20Role-Frontend%20Developer-pink)
+<br> ![Front-End Developer](https://img.shields.io/badge/Main%20Role-Frontend%20Developer-pink)
 
 <br>
 
 ### Backend Development
 - **Marcus Swanepoel [602162]** :
-- ![Backend Development Lead](https://img.shields.io/badge/Main%20Role-Backend%20Developer%20Lead-blue)
+<br> ![Backend Development Lead](https://img.shields.io/badge/Main%20Role-Backend%20Developer%20Lead-blue)
 
 - **Declin Vorkel [601756]** :
-- ![Backend Developer](https://img.shields.io/badge/Main%20Role-Backend%20Developer-blue)
+<br> ![Backend Developer](https://img.shields.io/badge/Main%20Role-Backend%20Developer-blue)
 
 <br>
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** :
-- ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue)  
+<br> ![Data Engineer Lead](https://img.shields.io/badge/Main%20Role-Data%20Engineer%20Lead-darkblue)  
 
 - **Rudi Jan Du Plessis [601342]** :
-- ![Data Engineer](https://img.shields.io/badge/Main%20Role-Data%20Engineer-darkblue) 
+<br> ![Data Engineer](https://img.shields.io/badge/Main%20Role-Data%20Engineer-darkblue) 
 
 
 ## 🌟 Team Vision
