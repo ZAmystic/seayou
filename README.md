@@ -27,55 +27,55 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ### Leadership
 - **Theart Jooste [601288]** – Project Leader  
-  ![Leadership](https://img.shields.io/badge/Role-Leadership-blue) ![Coordinator](https://img.shields.io/badge/Focus-Coordination-lightgrey)  
+  ![Team Lead](https://img.shields.io/badge/Role-Leadership-blue)
   Oversees the entire project, ensures milestones are met, and coordinates across all teams.  
 
 - **Jason Crous [601662]** – Project Manager  
-  ![Management](https://img.shields.io/badge/Role-Management-green) ![Planning](https://img.shields.io/badge/Focus-Planning-yellow)  
+  ![Project Manager](https://img.shields.io/badge/Role-Management-green)  
   Handles planning, scheduling, and resource allocation, ensuring smooth execution.
 
 <br>
 
 ### AI & Machine Learning
 - **Rivan Martiz [601530]** – AI & ML Engineering Team Lead  
-  ![AI Lead](https://img.shields.io/badge/Role-AI%20Lead-purple) ![ML](https://img.shields.io/badge/Focus-Machine%20Learning-orange)  
+  ![Machine Learning Lead](https://img.shields.io/badge/Role-AI%20Lead-lightblue)
   Guides the development of drowning detection models and predictive drift algorithms.  
 
 - **Nicholas Vronka [601596]** – AI & ML Engineer  
-  ![Engineer](https://img.shields.io/badge/Role-Engineer-lightblue) ![AI](https://img.shields.io/badge/Focus-AI-red)  
+  ![Machine Learning Engineer](https://img.shields.io/badge/Role-Engineer-lightblue)  
   Implements and optimizes machine learning models for real-time inference.
 
 <br>
 
 ### Frontend Development
 - **Jonathan Rossouw [601761]** – Frontend Development Team Lead  
-  ![Frontend Lead](https://img.shields.io/badge/Role-Frontend%20Lead-pink) ![UI](https://img.shields.io/badge/Focus-UI%20Design-brightgreen)  
+  ![Front-End Development Lead](https://img.shields.io/badge/Role-Frontend%20Lead-pink)
   Designs and manages the lifeguard dashboard and user interface.  
 
 - **Ryno Lourens [601845]** – Frontend Developer  
-  ![Frontend](https://img.shields.io/badge/Role-Frontend-orange) ![React](https://img.shields.io/badge/Tech-React-blue)  
+  ![Front-End Developer](https://img.shields.io/badge/Role-Frontend-pink)
   Builds React components, integrates live video feeds, and ensures usability.
 
 <br>
 
 ### Backend Development
 - **Marcus Swanepoel [602162]** – Backend Developer Team Lead  
-  ![Backend Lead](https://img.shields.io/badge/Role-Backend%20Lead-darkred) ![API](https://img.shields.io/badge/Focus-API-lightgrey)  
+  ![Backend Development Lead](https://img.shields.io/badge/Role-Backend%20Lead-blue)
   Architect of the backend services, APIs, and system integration.  
 
 - **Declin Vorkel [601756]** – Backend Developer  
-  ![Backend](https://img.shields.io/badge/Role-Backend-blue) ![Server](https://img.shields.io/badge/Focus-Server%20Logic-green)  
+  ![Backend Developer](https://img.shields.io/badge/Role-Backend-blue)
   Implements server-side logic, communication protocols, and data handling.
 
 <br>
 
 ### Data Engineering
 - **Timothy Wubbeling [602543]** – Data Engineer Team Lead  
-  ![Data Lead](https://img.shields.io/badge/Role-Data%20Lead-darkblue) ![Analytics](https://img.shields.io/badge/Focus-Analytics-orange)  
+  ![Data Engineer Lead](https://img.shields.io/badge/Role-Data%20Lead-darkblue)  
   Manages data pipelines, telemetry storage, and analytics.  
 
 - **Rudi Jan Du Plessis [601342]** – Data Engineer  
-  ![Data Engineer](https://img.shields.io/badge/Role-Data%20Engineer-lightgrey) ![Database](https://img.shields.io/badge/Focus-Database-yellow)  
+  ![Data Engineer](https://img.shields.io/badge/Role-Data%20Engineer-darkblue)  
   Works on database design, performance metrics, and reporting.
 
 ## 🌟 Team Vision
