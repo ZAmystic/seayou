@@ -25,6 +25,8 @@ South Africa has one of the world’s highest drowning rates, especially during 
 
 ## 👥 The SeaYou Team
 
+NB! This is not the final version of the teams
+
 ### Leadership
 - **Theart Jooste [601288]** :
  <br>![Team Lead](https://img.shields.io/badge/Main%20Role-Team%20Lead-ff004c) ![Solutions Architect](https://img.shields.io/badge/Secondary%20Role-Solutions%20Architect-F5EE27)
