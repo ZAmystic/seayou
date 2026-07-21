@@ -1,0 +1,11 @@
+.live-feeds-page {
+  background-color: #0c0f0f;
+  color: #e2e2e2;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.live-feeds-page .ai-detection-box {
+  border: 2px solid #e9c400;
+  box-shadow: 0 0 15px rgba(233, 196, 0, 0.4), inset 0 0 10px rgba(233, 196, 0, 0.2);
+}

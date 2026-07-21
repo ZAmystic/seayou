@@ -1,0 +1,12 @@
+.rescue-logs-page {
+  min-height: 100vh;
+}
+
+.rescue-logs-page .glass-panel {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rescue-logs-page .heat-point {
+  filter: blur(8px);
+  opacity: 0.6;
+}

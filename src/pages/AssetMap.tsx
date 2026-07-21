@@ -1,0 +1,293 @@
+import "./AssetMap.css";
+
+export default function AssetMap() {
+  return (
+    <div className="asset-map-page font-body-md text-body-md">
+      {/* TopAppBar */}
+      <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(185,199,228,0.1)]">
+        <div className="flex items-center gap-4">
+          <span className="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-100">
+            menu
+          </span>
+          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">
+            SeaYou
+          </h1>
+        </div>
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex gap-6">
+            <a className="font-label-caps text-label-caps text-primary border-b-2 border-primary py-1" href="#">
+              Command Center
+            </a>
+            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#">
+              Rescue Ops
+            </a>
+            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#">
+              Fleet
+            </a>
+          </nav>
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="material-symbols-outlined text-on-surface-variant hover:bg-white/5 p-2 rounded-full cursor-pointer">
+            notifications
+          </span>
+          <span className="material-symbols-outlined text-on-surface-variant hover:bg-white/5 p-2 rounded-full cursor-pointer">
+            settings
+          </span>
+        </div>
+      </header>
+
+      {/* SideNavBar */}
+      <aside className="hidden md:flex flex-col h-full py-6 gap-4 fixed left-0 top-0 w-64 bg-surface-container-low/80 backdrop-blur-2xl border-r border-white/10 shadow-2xl z-40 pt-20">
+        <div className="px-6 mb-4">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary/20">
+              <span className="material-symbols-outlined text-primary">person</span>
+            </div>
+            <div>
+              <p className="font-label-caps text-label-caps text-primary">Sector Alpha</p>
+              <p className="text-[10px] text-on-surface-variant uppercase tracking-widest">Active Ops</p>
+            </div>
+          </div>
+        </div>
+        <nav className="flex flex-col flex-grow">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+            <span className="material-symbols-outlined">dashboard</span>
+            <span className="font-label-caps text-label-caps">Dashboard</span>
+          </a>
+          <a className="bg-secondary-container text-on-secondary-container rounded-lg mx-2 flex items-center gap-3 px-4 py-3 shadow-[0_0_10px_rgba(184,57,0,0.3)] active:brightness-125" href="#">
+            <span className="material-symbols-outlined">explore</span>
+            <span className="font-label-caps text-label-caps">Asset Map</span>
+          </a>
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+            <span className="material-symbols-outlined">videocam</span>
+            <span className="font-label-caps text-label-caps">Live Feeds</span>
+          </a>
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+            <span className="material-symbols-outlined">history</span>
+            <span className="font-label-caps text-label-caps">Rescue Logs</span>
+          </a>
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+            <span className="material-symbols-outlined">bar_chart</span>
+            <span className="font-label-caps text-label-caps">Analytics</span>
+          </a>
+        </nav>
+        <div className="px-4 mt-auto mb-4">
+          <button className="w-full py-3 bg-[#FF6B35] text-white font-label-caps text-label-caps rounded-lg shadow-[0_0_15px_rgba(255,107,53,0.4)] hover:brightness-110 active:scale-[0.98] transition-all">
+            SOS EMERGENCY
+          </button>
+        </div>
+        <div className="border-t border-white/5 pt-4">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-2 mx-2" href="#">
+            <span className="material-symbols-outlined">help</span>
+            <span className="font-label-caps text-label-caps">Support</span>
+          </a>
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-2 mx-2" href="#">
+            <span className="material-symbols-outlined">dns</span>
+            <span className="font-label-caps text-label-caps">System Status</span>
+          </a>
+        </div>
+      </aside>
+
+      {/* Main Content Area */}
+      <main className="md:ml-64 pt-16 h-screen relative flex flex-col">
+        {/* Interactive Bathymetric Map */}
+        <div className="absolute inset-0 z-0 bg-[#050B14]">
+          <img
+            className="w-full h-full object-cover opacity-60"
+            alt="A dark-mode nautical chart showing ocean bathymetry, coastline, and glowing current vectors"
+            data-location="Coastal North Sea"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_glNTBZkc94BAx0x0uNTYMndbb4mCtbAcV4J2CUuMxRVI-axzuY6CnleUlDC09UeY5Svgpl4klBjSWSX1EklPNVCiuJPr2kdcEyC7Jsev3xcnn_WDRpZcV4RVxpZ09ZtY2cFEa9ZzkiAowjRqmlqvFULiQtAPPjYEa_CckTlc8P0mbg4PfC0L3M1vHg9NOkQUtnKgE9zlj3nnossp_qfrMuliSZhAgg5004-h7nJ4erV75p2yxugP3iBmTFOyYLRjNFOx9bcIx9w"
+          />
+          <div className="absolute inset-0 map-overlay pointer-events-none"></div>
+        </div>
+
+        {/* Left Float: Search Inputs */}
+        <div className="absolute top-24 left-8 z-10 w-80 space-y-4">
+          <div className="glass-panel p-6 rounded-xl">
+            <h2 className="font-label-caps text-label-caps text-tertiary mb-4">DRIFT PREDICTION PARAMETERS</h2>
+            <div className="space-y-4">
+              <div>
+                <label className="font-label-caps text-[10px] text-on-surface-variant mb-1 block">
+                  LAST SEEN LOCATION (LAT/LONG)
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    className="w-1/2 bg-surface-container-lowest border border-white/10 rounded px-3 py-2 text-telemetry-sm font-telemetry-sm text-primary focus:border-tertiary outline-none transition-colors"
+                    placeholder="52.3702° N"
+                    type="text"
+                  />
+                  <input
+                    className="w-1/2 bg-surface-container-lowest border border-white/10 rounded px-3 py-2 text-telemetry-sm font-telemetry-sm text-primary focus:border-tertiary outline-none transition-colors"
+                    placeholder="4.8952° E"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="font-label-caps text-[10px] text-on-surface-variant mb-1 block">ASSET TYPE</label>
+                <select className="w-full bg-surface-container-lowest border border-white/10 rounded px-3 py-2 text-telemetry-sm font-telemetry-sm text-on-surface focus:border-tertiary outline-none">
+                  <option>Life Raft (Low Profile)</option>
+                  <option>Small Vessel (&lt; 10m)</option>
+                  <option>Person Overboard</option>
+                </select>
+              </div>
+              <button className="w-full py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded hover:bg-primary-fixed transition-all active:scale-95">
+                GENERATE HEATMAP
+              </button>
+            </div>
+          </div>
+          <div className="glass-panel p-4 rounded-xl">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-label-caps text-label-caps text-on-surface">LEGEND</h3>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-[#FF6B35] shadow-[0_0_8px_rgba(255,107,53,0.8)]"></div>
+                <span className="text-[10px] font-label-caps uppercase text-on-surface-variant">Predicted Search Zone</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-tertiary shadow-[0_0_8px_rgba(233,196,0,0.8)]"></div>
+                <span className="text-[10px] font-label-caps uppercase text-on-surface-variant">Last Known Position</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="h-0.5 w-6 bg-primary opacity-50 relative">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t border-r border-primary rotate-45"></div>
+                </div>
+                <span className="text-[10px] font-label-caps uppercase text-on-surface-variant">Current Vectors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Float: Environmental Sidebar */}
+        <div className="absolute top-24 right-8 z-10 w-80 space-y-4">
+          <div className="glass-panel p-6 rounded-xl border-t-2 border-primary/30">
+            <h2 className="font-label-caps text-label-caps text-tertiary mb-6">ENVIRONMENTAL REAL-TIME</h2>
+            <div className="grid grid-cols-1 gap-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-label-caps text-label-caps text-on-surface-variant">TIDE HEIGHT</p>
+                  <p className="font-telemetry-lg text-telemetry-lg text-white">+2.45 M</p>
+                </div>
+                <span className="material-symbols-outlined text-primary text-3xl">water_damage</span>
+              </div>
+              <div className="h-[1px] bg-white/5"></div>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-label-caps text-label-caps text-on-surface-variant">SWELL DIRECTION</p>
+                  <p className="font-telemetry-lg text-telemetry-lg text-white">284° WNW</p>
+                </div>
+                <div className="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center">
+                  <span className="material-symbols-outlined text-primary rotate-[284deg]">navigation</span>
+                </div>
+              </div>
+              <div className="h-[1px] bg-white/5"></div>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-label-caps text-label-caps text-on-surface-variant">WIND VELOCITY</p>
+                  <div className="flex items-baseline gap-2">
+                    <p className="font-telemetry-lg text-telemetry-lg text-white">18.4</p>
+                    <p className="text-xs font-telemetry-sm text-on-surface-variant">KNOTS</p>
+                  </div>
+                </div>
+                <span className="material-symbols-outlined text-primary text-3xl">air</span>
+              </div>
+            </div>
+          </div>
+          {/* Weather Alert */}
+          <div className="glass-panel p-4 rounded-xl border border-error/30 bg-error-container/10">
+            <div className="flex gap-3">
+              <span className="material-symbols-outlined text-error" style={{ fontVariationSettings: "'FILL' 1" }}>
+                warning
+              </span>
+              <div>
+                <p className="font-label-caps text-label-caps text-error">SMALL CRAFT ADVISORY</p>
+                <p className="text-[11px] text-on-error-container leading-tight mt-1">
+                  High swell predicted for Sector Alpha within T+4 hours. Exercise extreme caution.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Controller: Time Slider */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 w-full max-w-4xl px-8">
+          <div className="glass-panel p-6 rounded-2xl border-t border-white/20 shadow-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-4">
+                <button className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 active:scale-90 transition-all">
+                  <span className="material-symbols-outlined text-white">play_arrow</span>
+                </button>
+                <div>
+                  <p className="font-label-caps text-label-caps text-on-surface">PROJECTION TIMELINE</p>
+                  <p className="font-telemetry-sm text-telemetry-sm text-primary">T + 12:45:00</p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-primary-container text-primary rounded text-[10px] font-bold border border-primary/20">
+                  LIVE VIEW
+                </span>
+                <span className="px-3 py-1 bg-surface-variant text-on-surface-variant rounded text-[10px] font-bold">
+                  PREDICTIVE
+                </span>
+              </div>
+            </div>
+            <div className="relative h-12 flex items-center">
+              <div className="absolute w-full h-1 bg-white/10 rounded-full"></div>
+              <div className="absolute w-1/2 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(185,199,228,0.5)]"></div>
+              <div className="absolute inset-0 flex justify-between px-1 items-end pb-1">
+                <span className="text-[9px] font-telemetry-sm text-on-surface-variant">T+0</span>
+                <span className="text-[9px] font-telemetry-sm text-on-surface-variant">T+6H</span>
+                <span className="text-[9px] font-telemetry-sm text-primary font-bold">T+12H</span>
+                <span className="text-[9px] font-telemetry-sm text-on-surface-variant">T+18H</span>
+                <span className="text-[9px] font-telemetry-sm text-on-surface-variant">T+24H</span>
+                <span className="text-[9px] font-telemetry-sm text-on-surface-variant">T+48H</span>
+              </div>
+              <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] cursor-pointer active:scale-125 transition-transform border-2 border-primary"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Coordinates Display Overlay */}
+        <div className="absolute bottom-4 right-4 z-10">
+          <div className="px-4 py-2 bg-surface-container-lowest/80 backdrop-blur rounded border border-white/5 flex gap-6">
+            <div className="flex flex-col">
+              <span className="text-[9px] font-label-caps text-on-surface-variant">CURSOR LAT</span>
+              <span className="font-telemetry-sm text-telemetry-sm text-primary">52.124.992</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[9px] font-label-caps text-on-surface-variant">CURSOR LONG</span>
+              <span className="font-telemetry-sm text-telemetry-sm text-primary">04.188.012</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[9px] font-label-caps text-on-surface-variant">DEPTH</span>
+              <span className="font-telemetry-sm text-telemetry-sm text-tertiary">-42.4M</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Mobile BottomNavBar */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-low/80 backdrop-blur-2xl flex justify-around items-center h-16 border-t border-white/10 z-50">
+        <a className="flex flex-col items-center text-on-surface-variant" href="#">
+          <span className="material-symbols-outlined">dashboard</span>
+          <span className="text-[10px] font-label-caps">Home</span>
+        </a>
+        <a className="flex flex-col items-center text-primary" href="#">
+          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
+            explore
+          </span>
+          <span className="text-[10px] font-label-caps">Predict</span>
+        </a>
+        <a className="flex flex-col items-center text-on-surface-variant" href="#">
+          <span className="material-symbols-outlined">videocam</span>
+          <span className="text-[10px] font-label-caps">Feeds</span>
+        </a>
+        <a className="flex flex-col items-center text-on-surface-variant" href="#">
+          <span className="material-symbols-outlined">bar_chart</span>
+          <span className="text-[10px] font-label-caps">Data</span>
+        </a>
+      </nav>
+    </div>
+  );
+}

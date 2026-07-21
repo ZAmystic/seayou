@@ -1,0 +1,23 @@
+.rescue-response-page {
+  background-color: #050b14;
+  color: #e2e2e2;
+  min-height: 100vh;
+}
+
+.rescue-response-page .emergency-glow {
+  box-shadow: 0 0 20px rgba(184, 57, 0, 0.4);
+}
+
+.rescue-response-page .pulse-emergency {
+  animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    border-color: rgba(184, 57, 0, 1);
+  }
+  50% {
+    border-color: rgba(184, 57, 0, 0.3);
+  }
+}

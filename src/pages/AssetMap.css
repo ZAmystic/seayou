@@ -1,0 +1,14 @@
+.asset-map-page {
+  background-color: #050b14;
+  color: #e2e2e2;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.asset-map-page .active-glow {
+  box-shadow: 0 0 15px rgba(185, 199, 228, 0.3);
+}
+
+.asset-map-page .map-overlay {
+  background-image: radial-gradient(circle at 50% 50%, transparent 0%, #121414 100%);
+}
