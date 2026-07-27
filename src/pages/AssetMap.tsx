@@ -1,6 +1,11 @@
 import "./AssetMap.css";
+import { Page } from "../types";
 
-export default function AssetMap() {
+interface AssetMapProps {
+  onNavigate: (page: Page) => void;
+}
+
+export default function AssetMap({ onNavigate }: AssetMapProps) {
   return (
     <div className="asset-map-page font-body-md text-body-md">
       {/* TopAppBar */}
@@ -18,7 +23,7 @@ export default function AssetMap() {
             <a className="font-label-caps text-label-caps text-primary border-b-2 border-primary py-1" href="#">
               Command Center
             </a>
-            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#">
+            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#"onClick={() => onNavigate?.("rescue-logs")}>
               Rescue Ops
             </a>
             <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#">
@@ -58,11 +63,11 @@ export default function AssetMap() {
             <span className="material-symbols-outlined">explore</span>
             <span className="font-label-caps text-label-caps">Asset Map</span>
           </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#" onClick={() => onNavigate?.("live-feeds")}>
             <span className="material-symbols-outlined">videocam</span>
             <span className="font-label-caps text-label-caps">Live Feeds</span>
           </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#" onClick={() => onNavigate?.("rescue-logs")}>
             <span className="material-symbols-outlined">history</span>
             <span className="font-label-caps text-label-caps">Rescue Logs</span>
           </a>

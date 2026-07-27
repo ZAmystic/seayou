@@ -1,6 +1,12 @@
 import "./LiveFeeds.css";
+import { Page } from "../types";
 
-export default function LiveFeeds() {
+interface LiveFeedsProps {
+  onNavigate: (page: Page) => void;
+}
+
+export default function LiveFeeds({ onNavigate }: LiveFeedsProps) {
+
   return (
     <div className="live-feeds-page h-screen flex flex-col">
       {/* TopAppBar */}
@@ -16,10 +22,10 @@ export default function LiveFeeds() {
             <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors px-2 py-1" href="#">
               Dashboard
             </a>
-            <a className="font-label-caps text-label-caps text-primary border-b-2 border-primary px-2 py-1" href="#">
+            <a className="font-label-caps text-label-caps text-primary border-b-2 border-primary px-2 py-1" href="#"onClick={() => onNavigate?.("live-feeds")}>
               Live Feeds
             </a>
-            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors px-2 py-1" href="#">
+            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors px-2 py-1" href="#" onClick={() => onNavigate?.("asset-map")}>
               Asset Map
             </a>
           </nav>
@@ -43,7 +49,7 @@ export default function LiveFeeds() {
             <p className="font-label-caps text-label-caps text-on-surface-variant opacity-70">Active Ops</p>
           </div>
           <div className="flex flex-col gap-1">
-            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer">
+            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer" onClick={() => onNavigate?.("asset-map")}>
               <span className="material-symbols-outlined" data-icon="dashboard">
                 dashboard
               </span>
@@ -55,17 +61,17 @@ export default function LiveFeeds() {
               </span>
               <span className="font-label-caps text-label-caps">Live Feeds</span>
             </div>
-            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer">
-              <span className="material-symbols-outlined" data-icon="explore">
+            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer" onClick={() => onNavigate?.("asset-map")}>
+              <span className="material-symbols-outlined" data-icon="explore" >
                 explore
               </span>
               <span className="font-label-caps text-label-caps">Asset Map</span>
             </div>
-            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer">
+            <div className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 rounded-lg hover:bg-surface-variant/50 transition-all cursor-pointer" onClick={() => onNavigate?.("rescue-logs")}>
               <span className="material-symbols-outlined" data-icon="history">
                 history
               </span>
-              <span className="font-label-caps text-label-caps">Rescue Logs</span>
+              <span className="font-label-caps text-label-caps" onClick={() => onNavigate?.("rescue-logs")}>Rescue Logs</span>
             </div>
           </div>
           <div className="mt-auto px-4 flex flex-col gap-4">

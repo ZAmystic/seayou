@@ -1,6 +1,11 @@
 import "./RescueResponse.css";
+import { Page } from "../types";
 
-export default function RescueResponse() {
+interface RescueResponseProps {
+  onNavigate: (page: Page) => void;
+}
+
+export default function RescueResponse({ onNavigate }: RescueResponseProps) {
   return (
     <div className="rescue-response-page overflow-hidden">
       {/* Top Navigation Bar */}
@@ -59,19 +64,19 @@ export default function RescueResponse() {
             </span>
             <span className="font-label-caps text-label-caps">Dashboard</span>
           </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#" onClick={() => onNavigate?.("live-feeds")}>
             <span className="material-symbols-outlined" data-icon="videocam">
               videocam
             </span>
             <span className="font-label-caps text-label-caps">Live Feeds</span>
           </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#">
+          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#" onClick={() => onNavigate?.("asset-map")}>
             <span className="material-symbols-outlined" data-icon="explore">
               explore
             </span>
             <span className="font-label-caps text-label-caps">Asset Map</span>
           </a>
-          <a className="bg-secondary-container text-on-secondary-container rounded-lg mx-2 flex items-center gap-3 px-4 py-3 shadow-[0_0_10px_rgba(184,57,0,0.3)] active:brightness-125" href="#">
+          <a className="bg-secondary-container text-on-secondary-container rounded-lg mx-2 flex items-center gap-3 px-4 py-3 shadow-[0_0_10px_rgba(184,57,0,0.3)] active:brightness-125" href="#" onClick={() => onNavigate?.("rescue-logs")}>
             <span
               className="material-symbols-outlined"
               data-icon="history"
