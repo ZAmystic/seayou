@@ -3,95 +3,132 @@ import { Page } from "../types";
 
 interface AssetMapProps {
   onNavigate: (page: Page) => void;
+  activePage: Page;
 }
 
-export default function AssetMap({ onNavigate }: AssetMapProps) {
+export default function AssetMap({ onNavigate, activePage }: AssetMapProps) {
   return (
     <div className="asset-map-page font-body-md text-body-md">
-      {/* TopAppBar */}
-      <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(185,199,228,0.1)]">
+     {/* Top Logo */}
+      <header className="fixed top-0 left-5 w-full z-50 flex items-center">
         <div className="flex items-center gap-4">
-          <span className="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-100">
-            menu
-          </span>
-          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">
-            SeaYou
-          </h1>
+
+          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">SeaYou</h1>
         </div>
-        <div className="hidden md:flex items-center gap-8">
-          <nav className="flex gap-6">
-            <a className="font-label-caps text-label-caps text-primary border-b-2 border-primary py-1" href="#">
-              Command Center
-            </a>
-            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#"onClick={() => onNavigate?.("rescue-logs")}>
-              Rescue Ops
-            </a>
-            <a className="font-label-caps text-label-caps text-on-surface-variant hover:bg-white/5 transition-colors py-1" href="#">
-              Fleet
-            </a>
-          </nav>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="material-symbols-outlined text-on-surface-variant hover:bg-white/5 p-2 rounded-full cursor-pointer">
-            notifications
-          </span>
-          <span className="material-symbols-outlined text-on-surface-variant hover:bg-white/5 p-2 rounded-full cursor-pointer">
-            settings
-          </span>
-        </div>
+        
       </header>
 
-      {/* SideNavBar */}
-      <aside className="hidden md:flex flex-col h-full py-6 gap-4 fixed left-0 top-0 w-64 bg-surface-container-low/80 backdrop-blur-2xl border-r border-white/10 shadow-2xl z-40 pt-20">
+      {/* Side Navigation Bar */}
+      <nav className="hidden md:flex flex-col h-full py-6 gap-4 fixed left-0 top-0 w-64 bg-surface-container-low/80 backdrop-blur-2xl border-r border-white/10 shadow-2xl z-40 pt-20">
         <div className="px-6 mb-4">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center border border-primary/20">
-              <span className="material-symbols-outlined text-primary">person</span>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+              <span className="material-symbols-outlined text-white" data-icon="person">
+                person
+              </span>
             </div>
             <div>
-              <p className="font-label-caps text-label-caps text-primary">Sector Alpha</p>
-              <p className="text-[10px] text-on-surface-variant uppercase tracking-widest">Active Ops</p>
+              <h3 className="font-headline-md text-[14px] text-primary">Sector Alpha</h3>
+              <p className="font-label-caps text-label-caps text-on-surface-variant">Active Ops</p>
             </div>
           </div>
         </div>
-        <nav className="flex flex-col flex-grow">
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="font-label-caps text-label-caps">Dashboard</span>
-          </a>
-          <a className="bg-secondary-container text-on-secondary-container rounded-lg mx-2 flex items-center gap-3 px-4 py-3 shadow-[0_0_10px_rgba(184,57,0,0.3)] active:brightness-125" href="#">
-            <span className="material-symbols-outlined">explore</span>
+        <div className="flex flex-col gap-1">
+          <button
+            className={`mx-2 flex items-center gap-3 px-4 py-3 rounded-[30px] font-bold text-white shadow-[0_30px_10px_-20px_rgba(0,0,0,0.2)] transition-all duration-300 ${
+              activePage === "rescue-response"
+                ? "bg-[length:300%] hover:bg-[length:320%] bg-left hover:bg-right"
+                : "bg-transparent hover:bg-white/5"
+            }`}
+            style={
+              activePage === "rescue-response"
+                ? {
+                    background: "linear-gradient(15deg, #de6f3d, #f09f33, #de6f3d)",
+                    textShadow: "2px 2px 3px rgb(255, 132, 0)",
+                  }
+                : undefined
+            }
+            onClick={() => onNavigate?.("rescue-response")}
+          >
+            <span className="material-symbols-outlined" data-icon="dashboard" style={{ color: "#fbfbfb", transition: "0.3s ease" }}>
+              dashboard
+            </span>
+            <span className="font-label-caps text-label-caps" style={{ color: "#ffffff", transition: "0.3s ease" }}>
+              Dashboard
+            </span>
+          </button>
+
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-[#FF6B35]/5 transition-all dashboard-btn ${
+              activePage === "asset-map" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("asset-map")}
+          >
+            <span className="material-symbols-outlined" data-icon="explore">
+              explore
+            </span>
             <span className="font-label-caps text-label-caps">Asset Map</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#" onClick={() => onNavigate?.("live-feeds")}>
-            <span className="material-symbols-outlined">videocam</span>
+          </button>
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all ${
+              activePage === "live-feeds" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("live-feeds")}
+          >
+            <span className="material-symbols-outlined" data-icon="videocam">
+              videocam
+            </span>
             <span className="font-label-caps text-label-caps">Live Feeds</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#" onClick={() => onNavigate?.("rescue-logs")}>
-            <span className="material-symbols-outlined">history</span>
+          </button>
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all ${
+              activePage === "rescue-logs" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("rescue-logs")}
+          >
+            <span
+              className="material-symbols-outlined"
+              data-icon="history"
+              data-weight="fill"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              history
+            </span>
             <span className="font-label-caps text-label-caps">Rescue Logs</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-surface-variant/50 transition-all rounded-lg" href="#">
-            <span className="material-symbols-outlined">bar_chart</span>
+          </button>
+          <button
+            className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all"
+            onClick={() => onNavigate?.("rescue-logs")}
+          >
+            <span className="material-symbols-outlined" data-icon="bar_chart">
+              bar_chart
+            </span>
             <span className="font-label-caps text-label-caps">Analytics</span>
-          </a>
-        </nav>
-        <div className="px-4 mt-auto mb-4">
-          <button className="w-full py-3 bg-[#FF6B35] text-white font-label-caps text-label-caps rounded-lg shadow-[0_0_15px_rgba(255,107,53,0.4)] hover:brightness-110 active:scale-[0.98] transition-all">
-            SOS EMERGENCY
           </button>
         </div>
-        <div className="border-t border-white/5 pt-4">
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-2 mx-2" href="#">
-            <span className="material-symbols-outlined">help</span>
-            <span className="font-label-caps text-label-caps">Support</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-2 mx-2" href="#">
-            <span className="material-symbols-outlined">dns</span>
-            <span className="font-label-caps text-label-caps">System Status</span>
-          </a>
+        <div className="mt-auto px-4 pb-4">
+          <button className="w-full py-4 bg-secondary-container text-white font-bold rounded-lg emergency-glow border border-secondary pulse-emergency flex items-center justify-center gap-2 active:scale-95 transition-transform">
+            <span className="material-symbols-outlined" data-icon="warning">
+              warning
+            </span>
+            SOS EMERGENCY
+          </button>
+          <div className="mt-6 flex flex-col gap-2">
+            <a className="flex items-center gap-3 px-4 py-2 text-on-surface-variant text-[12px] hover:text-on-surface" href="#">
+              <span className="material-symbols-outlined text-[18px]" data-icon="help">
+                help
+              </span>
+              Support
+            </a>
+            <a className="flex items-center gap-3 px-4 py-2 text-on-surface-variant text-[12px] hover:text-on-surface" href="#">
+              <span className="material-symbols-outlined text-[18px]" data-icon="dns">
+                dns
+              </span>
+              System Status
+            </a>
+          </div>
         </div>
-      </aside>
+      </nav>
 
       {/* Main Content Area */}
       <main className="md:ml-64 pt-16 h-screen relative flex flex-col">

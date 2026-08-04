@@ -21,3 +21,38 @@
     border-color: rgba(184, 57, 0, 0.3);
   }
 }
+
+.dashboard-btn {
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  background: linear-gradient(
+    15deg,
+    #de6f3d,
+    #f09f33,
+    #de6f3d
+    
+  );
+
+  background-size: 300%;
+  background-position: left center;
+
+  transition:
+    background-position 0.5s ease,
+    background-size 0.5s ease,
+    transform 0.2s ease;
+
+  box-shadow: 0 30px 10px -20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-btn:hover {
+  background-position: right center;
+  background-size: 320%;
+}
+
+.dashboard-btn:active {
+  transform: scale(0.98);
+}

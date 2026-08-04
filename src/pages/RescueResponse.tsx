@@ -3,43 +3,20 @@ import { Page } from "../types";
 
 interface RescueResponseProps {
   onNavigate: (page: Page) => void;
+  activePage: Page;
 }
 
-export default function RescueResponse({ onNavigate }: RescueResponseProps) {
+export default function RescueResponse({ onNavigate, activePage }: RescueResponseProps) {
   return (
     <div className="rescue-response-page overflow-hidden">
-      {/* Top Navigation Bar */}
-      <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(185,199,228,0.1)]">
+
+      {/* Top Logo */}
+      <header className="fixed top-0 left-5 w-full z-50 flex items-center">
         <div className="flex items-center gap-4">
-          <span className="material-symbols-outlined text-primary" data-icon="menu">
-            menu
-          </span>
-          <span className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">
-            SeaYou
-          </span>
+
+          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">SeaYou</h1>
         </div>
-        <div className="flex flex-col items-center">
-          <span className="font-label-caps text-label-caps text-on-secondary-fixed">MISSION STATUS</span>
-          <h1 className="font-headline-md text-headline-md-mobile md:text-headline-md text-secondary">
-            Command Center
-          </h1>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="flex gap-2">
-            <span
-              className="material-symbols-outlined text-primary p-2 hover:bg-white/5 transition-colors active:scale-95 duration-100"
-              data-icon="notifications"
-            >
-              notifications
-            </span>
-            <span
-              className="material-symbols-outlined text-primary p-2 hover:bg-white/5 transition-colors active:scale-95 duration-100"
-              data-icon="settings"
-            >
-              settings
-            </span>
-          </div>
-        </div>
+        
       </header>
 
       {/* Side Navigation Bar */}
@@ -58,25 +35,58 @@ export default function RescueResponse({ onNavigate }: RescueResponseProps) {
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#">
-            <span className="material-symbols-outlined" data-icon="dashboard">
+          <button
+            className={`mx-2 flex items-center gap-3 px-4 py-3 rounded-[30px] font-bold text-white shadow-[0_30px_10px_-20px_rgba(0,0,0,0.2)] transition-all duration-300  dashboard-btn${
+              activePage === "rescue-response"
+                ? "bg-[length:300%] hover:bg-[length:320%] bg-left hover:bg-right"
+                : "bg-transparent hover:bg-white/5"
+            }`}
+            style={
+              activePage === "rescue-response"
+                ? {
+                    background: "linear-gradient(15deg, #de6f3d, #f09f33, #de6f3d)",
+                    textShadow: "2px 2px 3px rgb(255, 132, 0)",
+                  }
+                : undefined
+            }
+            onClick={() => onNavigate?.("rescue-response")}
+          >
+            <span className="material-symbols-outlined" data-icon="dashboard" style={{ color: "#fbfbfb", transition: "0.3s ease" }}>
               dashboard
             </span>
-            <span className="font-label-caps text-label-caps">Dashboard</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#" onClick={() => onNavigate?.("live-feeds")}>
-            <span className="material-symbols-outlined" data-icon="videocam">
-              videocam
+            <span className="font-label-caps text-label-caps" style={{ color: "#ffffff", transition: "0.3s ease" }}>
+              Dashboard
             </span>
-            <span className="font-label-caps text-label-caps">Live Feeds</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#" onClick={() => onNavigate?.("asset-map")}>
+          </button>
+
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-[#FF6B35]/5 transition-all ${
+              activePage === "asset-map" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("asset-map")}
+          >
             <span className="material-symbols-outlined" data-icon="explore">
               explore
             </span>
             <span className="font-label-caps text-label-caps">Asset Map</span>
-          </a>
-          <a className="bg-secondary-container text-on-secondary-container rounded-lg mx-2 flex items-center gap-3 px-4 py-3 shadow-[0_0_10px_rgba(184,57,0,0.3)] active:brightness-125" href="#" onClick={() => onNavigate?.("rescue-logs")}>
+          </button>
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all ${
+              activePage === "live-feeds" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("live-feeds")}
+          >
+            <span className="material-symbols-outlined" data-icon="videocam">
+              videocam
+            </span>
+            <span className="font-label-caps text-label-caps">Live Feeds</span>
+          </button>
+          <button
+            className={`text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all ${
+              activePage === "rescue-logs" ? "bg-[#FF6B35]/10 rounded-lg" : ""
+            }`}
+            onClick={() => onNavigate?.("rescue-logs")}
+          >
             <span
               className="material-symbols-outlined"
               data-icon="history"
@@ -86,20 +96,23 @@ export default function RescueResponse({ onNavigate }: RescueResponseProps) {
               history
             </span>
             <span className="font-label-caps text-label-caps">Rescue Logs</span>
-          </a>
-          <a className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all" href="#">
+          </button>
+          <button
+            className="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 mx-2 hover:bg-white/5 transition-all"
+            onClick={() => onNavigate?.("rescue-logs")}
+          >
             <span className="material-symbols-outlined" data-icon="bar_chart">
               bar_chart
             </span>
             <span className="font-label-caps text-label-caps">Analytics</span>
-          </a>
+          </button>
         </div>
         <div className="mt-auto px-4 pb-4">
           <button className="w-full py-4 bg-secondary-container text-white font-bold rounded-lg emergency-glow border border-secondary pulse-emergency flex items-center justify-center gap-2 active:scale-95 transition-transform">
             <span className="material-symbols-outlined" data-icon="warning">
               warning
             </span>
-            SOS EMERGENCY
+            SOS EMERGENCY 
           </button>
           <div className="mt-6 flex flex-col gap-2">
             <a className="flex items-center gap-3 px-4 py-2 text-on-surface-variant text-[12px] hover:text-on-surface" href="#">
@@ -119,7 +132,7 @@ export default function RescueResponse({ onNavigate }: RescueResponseProps) {
       </nav>
 
       {/* Main Content Canvas */}
-      <main className="md:ml-64 pt-16 h-screen flex flex-col">
+      <main className="md:ml-64 pt-0 h-screen flex flex-col">
         {/* Top High Alert Header */}
         <section className="h-24 bg-error-container/40 backdrop-blur-md flex items-center justify-between px-8 border-b border-error/30 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-error via-transparent to-transparent"></div>
