@@ -3,8 +3,10 @@ import tensorflow as tf
 import cv2
 import os
 
-trainPath = "C:/Users/Jacks/Downloads/archive/train"
-testPath = "C:/Users/Jacks/Downloads/archive/test"
+print("Enter File Paths. Make sure to use '/' instead of '\\' in the path")
+trainPath = input("Train Path: ")
+testPath = input("Test Path: ")
+modelFileName = input("Save Location: ") #eg.   D:/SeaYouModel/emotion.h5
 
 folderList = os.listdir(trainPath)
 folderList.sort()
@@ -91,3 +93,104 @@ print("To categorical")
 print(y_train)
 print(y_train.shape)
 print(y_train[0])
+
+
+
+#Build model:
+#===========
+
+input_shape = X_train.shape[1:]
+print(input_shape)
+
+from keras.models import Sequential
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
+from keras.optimizers import Adam
+from keras.callbacks import EarlyStopping
+import matplotlib.pyplot as plt
+
+model = Sequential()
+model.add(Conv2D(input_shape=input_shape, filters=64, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=64, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+
+model.add(Conv2D(filters=128, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=128, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+
+model.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=256, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+
+
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(Conv2D(filters=512, kernel_size=(3,3), padding="same", activation="relu"))
+model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+
+model.add(Flatten())
+model.add(Dense(4096, activation="relu"))
+model.add(Dropout(0.5))
+model.add(Dense(4096, activation="relu"))
+model.add(Dense(7, activation="softmax"))
+
+print(model.summary())
+
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
+
+batch=32
+epochs=30
+
+stepsPerEpoch = np.ceil(len(X_train)/batch)
+validationSteps = np.ceil(len(X_test)/batch)
+
+stopEarly = EarlyStopping(monitor='val_accuracy', patience=5)
+
+# train the model
+history = model.fit(X_train,
+                     y_train,
+                     batch_size=batch,
+                     epochs=epochs,
+                     verbose=1,
+                     validation_data=(X_test,y_test),
+                     shuffle=True,
+                     callbacks=[stopEarly])
+
+# show the result based on pyplot
+
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+# show the charts
+epochs = range(len(acc))
+
+# show train and validation train chart
+
+plt.plot(epochs, acc , 'r' , label="Train accuracy")
+plt.plot(epochs, val_acc , 'b' , label="Validation accuracy")
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.title("Trainig and validation Accuracy")
+plt.legend(loc='lower right')
+plt.show()
+
+# show loss and validation loss chart
+
+plt.plot(epochs, loss , 'r' , label="Train loss")
+plt.plot(epochs, val_loss , 'b' , label="Validation loss")
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title("Trainig and validation Loss")
+plt.legend(loc='upper right')
+plt.show()
+
+# save the model
+
+model.save(modelFileName)
