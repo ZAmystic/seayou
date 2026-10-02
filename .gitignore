@@ -25,6 +25,25 @@ dist-ssr
 *.wsuo
 *VSWorkSpaceState.json
 
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+ 
+# Generated data and trained model (recreate with generate_data.py and train_model.py)
+data/
+train.csv
+test.csv
+model/*.joblib
+drift_model.joblib
+ 
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
 # --- SeaYou ---------------------------------------------------------------
 # NEVER commit these. seayou_station.json holds the drone and viewer tokens
 # the ground station issues, users.json holds the dashboard accounts. Both
